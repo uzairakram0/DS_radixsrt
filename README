@@ -1,0 +1,78 @@
+NAME: Uzair Akram
+ASSIGNMENT5
+
+compile command: g++ radixsrt.cpp
+***You may have to compile with: [g++ radixsrt.cpp -lrt] using -lrt flag***
+run: ./a.out <radix>
+
+I have also included a compiled executable file radixsort. To run: ./radixsort <radix>
+
+DESCRIPTION
+radixsrt.cpp
+This a time analysis program of radix sort; a program that empirically tests the time of 10 passes of 10 different generated pieces of data. The radix sort uses count sort as base algortihm for its sorting. Radix loops through each digit of the integer by exponentiating the radix and count sorting each digit.
+
+PLOTS:
+I have included some plots for different radix bases binary to hex and their performances on size 10, 100, 1000, 10000.
+I have also inclueded a radix comparison plot of different radix binary to hex and their average time on the largest size 10000.
+
+EXTRA:
+I have included some checking functions: void checkSort(int arr[], int n); to test if the sort was correct.
+
+SAMPLE RUN:
+
+
+dynamic-10-125-198-1:assignment5 uzairakram$ g++ radixsrt.cpp
+dynamic-10-125-198-1:assignment5 uzairakram$ ./a.out 8
+Radix Sort: base = 8 size = 10
+Unsorted: 1730 2459 1535 6572 3979 4103 2257 7720 9979 801
+Sorted: 801 1535 1730 2257 2459 3979 4103 6572 7720 9979
+Pass1:     1000.0 nanoseconds
+Pass2:     2000.0 nanoseconds
+Pass3:     1000.0 nanoseconds
+Pass4:     1000.0 nanoseconds
+Pass5:     1000.0 nanoseconds
+Pass6:     2000.0 nanoseconds
+Pass7:     1000.0 nanoseconds
+Pass8:     1000.0 nanoseconds
+Pass9:     1000.0 nanoseconds
+Pass10:     1000.0 nanoseconds
+Average:     1200.0 nanoseconds
+
+Radix Sort: base = 8 size = 100
+Pass1:     12000.0 nanoseconds
+Pass2:     12000.0 nanoseconds
+Pass3:     12000.0 nanoseconds
+Pass4:     21000.0 nanoseconds
+Pass5:     15000.0 nanoseconds
+Pass6:     13000.0 nanoseconds
+Pass7:     14000.0 nanoseconds
+Pass8:     14000.0 nanoseconds
+Pass9:     13000.0 nanoseconds
+Pass10:     16000.0 nanoseconds
+Average:     15400.0 nanoseconds
+
+Radix Sort: base = 8 size = 1000
+Pass1:     115000.0 nanoseconds
+Pass2:     153000.0 nanoseconds
+Pass3:     131000.0 nanoseconds
+Pass4:     127000.0 nanoseconds
+Pass5:     150000.0 nanoseconds
+Pass6:     130000.0 nanoseconds
+Pass7:     127000.0 nanoseconds
+Pass8:     157000.0 nanoseconds
+Pass9:     122000.0 nanoseconds
+Pass10:     121000.0 nanoseconds
+Average:     148700.0 nanoseconds
+
+Radix Sort: base = 8 size = 10000
+Pass1:     1096000.0 nanoseconds
+Pass2:     1291000.0 nanoseconds
+Pass3:     1492000.0 nanoseconds
+Pass4:     1072000.0 nanoseconds
+Pass5:     1006000.0 nanoseconds
+Pass6:     1013000.0 nanoseconds
+Pass7:     1092000.0 nanoseconds
+Pass8:     1047000.0 nanoseconds
+Pass9:     1002000.0 nanoseconds
+Pass10:     1002000.0 nanoseconds
+Average:     1260000.0 nanoseconds
